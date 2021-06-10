@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\usepackage{outlines}
+% Change the colours if you want to
+%\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{DarkGrey}{HTML}{212020}
+\definecolor{MyBlue}{HTML}{1B6F8E}
+\definecolor{MyRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{heading}{MyBlue}
+\colorlet{accent}{MyRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{DarkGrey}
+\colorlet{tagline}{MyRed}
+\colorlet{headingrule}{GoldenEarth}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\begin{document}
+\name{Aadarsh Mehdi}
+\tagline{Computer Science Student}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{a.jpg}
+
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{aadarshofficial110@gmail.com}
+  \phone{+36205176258}
+  \mailaddress{-}
+  \location{Budapest, HUNGARY}
+  \linkedin{aadarsh-mehdi-73754b13b/}
+  \github{amhkhowaja}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Volunteer - Developer Student Club -Powered by Google }{University of Debrecen}{September 2020 -- Ongoing}{Debrecen, Hungary}
+
+\divider
+
+\cvevent{Network Intern -IT Department}{Khairpur Sugar Mills}{June 2019 -- June 2019}{Khairpur, Pakistan}
+\begin{outline}
+\1 Focused on : 
+\2 Server Designing, Linux operation, Mac spoofing, Network troubleshooting, Auditing network nodes.
+\end{outline}
+\divider
+
+\cvevent{Vice President}{Asgharia Student Organization Unit Badin}{2017--  2018}{Badin, Pakistan}
+\divider
+
+
+\cvsection{Education}
+\cvevent{B.Sc.\ in Computer Science}{University of Debrecen}{Sept 2020 --  July 2021}{}
+\begin{outline}
+\1 Main Subjects : 
+\2 Visualized Mathematics, Operating System, Data structure and algorithms, JAVA OOP, Foundation of Artificial Intelligence, Database Management system, 3D Modeling, Network architectures and Protocol,
+\end{outline}              
+\medskip
+%\vspace{10mm}
+\divider
+\cvevent{B.Sc.\ in Computer Science}{National University of Science and Technology}{Sept 2019 --  July 2020}{}
+\begin{outline}
+\1 Majors: 
+\2 C++ Procedural Programming Paradigm , JAVA OOP, Digital Logic Design , 
+\end{outline}              
+\medskip
+%\vspace{10mm}
+\divider
+\cvevent{HSSC.\ - Pre-Engineering}{Rahim Public School and College}{Aug 2017 --  June 2019}{}
+\medskip
+\vspace{10mm}
+\divider
+\cvevent{SSC.\ - Science Group}{Army Public School and College Systems APSACS}{Aug 2015 --  June 2017}{}
+\medskip
+%\vspace{10mm}
+\divider
+
+\cvsection{Skills Highlights}
+
+%\cvevent{Data Analytics and Dashboard}{Course Project}{}{}
+\begin{itemize}
+\item Experience with C, C++, Java, Python, SQL and MATLAB.
+\item Understanding of Data Science, Machine Learning, Data Visualization
+\item Hands-on on Automation, Web scrapping , and cool projects
+\item Enthusiast in learning new technologies and working on projects 
+\item English Language Skill
+\end{itemize}
+
+\divider
+
+
+
+\cvsection{Certifications}
+\begin{itemize}
+\item Hacker Rank -- 3 stars in Problem Solving
+\item Hacker Rank -- 3 stars in SQL
+\item Travel Python to Machine Learning Bootcamp -- GDSC Mehran University Pakistan
+\item Python For Everybody - Python Introduction (University of Michigan)
+\item Python For Everybody - Python Datastructures (University of Michigan)
+\item Python For Everybody - Using Python with Web (University of Michigan)
+\item Attendee in DSC (University of Debrecen) major events:
+\end{itemize}
+\begin{outline}
+\2 EAndroid Study Jam Workshop
+\2 Firbase Workshop
+\2 Google Cloud Workshop
+\2 Flutter Hands-On Workshop
+\end{outline}         
+	 
+\begin{itemize}
+\item Best Brand Ambassador in Badin Model United Nation(Badin MUN)
+\item      Certification of Participation – Laar Humanitarian and Development Programme (LHDP)/Indus Consortium
+\item      Certification of Participation – Zonal Debate Competition 
+\end{itemize}
+Licensed Certificates:
+\linkedin{aadarsh-mehdi-73754b13b}
+
+\divider
+
+
+
+%\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+%A short abstract would also work.
+
+%\medskip
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+%\wheelchart{1.5cm}{0.5cm}{%
+  %6/8em/accent!30/{Sleep,\\beautiful sleep},
+  %3/8em/accent!40/Hopeful novelist by night,
+  %8/8em/accent!60/Daytime job,
+  %2/10em/accent/Sports and relaxation,
+  %5/6em/accent!20/Spending time with family
+%}
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Career Objective}
+
+\begin{quote}
+"Currently Computer Science student seeking to use my backend 
+development knowledge in an entry-level position. Possess the 
+capability to develop and build handsome software algorithms. 
+Seeking the opportunity to implement the acquaintance I have learned 
+so far in the projects Development''
+\end{quote}
+
+\cvsection{Skills}
+
+
+\cvtag{Python}
+\cvtag{Machine Learning}
+\cvtag{Webscrapping}
+\cvtag{Automation}
+\cvtag{Java}
+\cvtag{OOP}
+\cvtag{C++}
+\cvtag{Git}
+\cvtag{Data Visualization}
+\cvtag{SQL}
+
+
+
+\divider\smallskip
+
+
+\cvsection{Strengths}
+
+\cvtag{Adaptability}
+\cvtag{Creative Thinker}
+\cvtag{Quick Learner}\\
+\cvtag{Service Focused}
+\cvtag{Logical Thinking}
+
+
+\divider\smallskip
+
+\cvsection{Languages}
+
+\cvskill{English}{4}
+\cvskill{Urdu}{5}
+\cvskill{Sindhi}{5}
+
+\divider\smallskip
+
+
+\cvsection{Projects}
+\begin{itemize}
+\item Selenium based Whatsapp bot (Python, Selenium)
+\item Weblink Webscrapper (Python, BeautifulSoup)
+\item Campus Management System (Java, CSV Files)
+\item Tic Tac Toe Game (Java)
+\item Ship battlefield Game (Java)
+\item Daewoo Ticketing System(Java)
+\item Campus Management System -- Shell Based(C++)
+\end{itemize}
+%\cvsection{Reference}
+\divider
+
+
+\end{paracol}
+
+
+\end{document}
